@@ -21,7 +21,7 @@ def main():
     except sr.RequestError as e:
         st.error(f"Error connecting to Google Speech Recognition service: {e}")
         
-    st.title("Audio to Text Converter")
+    # st.title("Audio to Text Converter")
 
     # # Upload the audio file
     # audio_file = st.file_uploader("Upload an audio file", type=["mp3", "wav", "ogg"])
