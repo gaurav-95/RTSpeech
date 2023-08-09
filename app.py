@@ -25,6 +25,15 @@ from twilio.rest import Client
 
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
 
+from streamlit_webrtc import (
+    RTCConfiguration,
+    WebRtcMode,
+    WebRtcStreamerContext,
+    webrtc_streamer,
+)
+RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun:stun2.l.google.com:19302"]}]})
+
+
 HERE = Path(__file__).parent
 
 logger = logging.getLogger(__name__)
@@ -152,6 +161,14 @@ def app_sst(model_path: str, lm_path: str, lm_alpha: float, lm_beta: float, beam
         rtc_configuration={"iceServers": get_ice_servers()},
         media_stream_constraints={"video": False, "audio": True},
     )
+    
+    webrtc_streamer(key="proctor", 
+                    video_frame_callback=video_frame_callback, 
+                    mode=WebRtcMode.SENDRECV, 
+                    rtc_configuration=RTC_CONFIGURATION, 
+                    media_stream_constraints={"video": True, "audio": False}) #, rtc_configuration=RTC_CONFIGURATION
+    
+        # time.sleep(sleep_value)
 
     status_indicator = st.empty()
 
