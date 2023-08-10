@@ -6,7 +6,7 @@ from vosk import Model, KaldiRecognizer
 
 def main():
     st.title("Real-Time Speech Recognition App")
-
+    
     # Create a button to start speech recognition
     if st.button("Start Recognition"):
         st.text("Listening...")
@@ -19,17 +19,19 @@ def main():
         p = pyaudio.PyAudio()
         stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
 
+        stop_button = st.button("Stop Recognition")  # Create a stop button
+
         # Speech recognition loop
-        while True:
+        while not stop_button:
             data = stream.read(4000)
             if len(data) == 0:
                 break
             if recognizer.AcceptWaveform(data):
-                result = recognizer.Result() # returns a string dictionary
-                result = json.loads(result) # parse the string dict as dict
+                result = recognizer.Result()  # returns a string dictionary
+                result = json.loads(result)  # parse the string dict as dict
                 
-                st.text(result['text'])
-   
+                st.text(result['text'] + '\n')
+        
         stream.stop_stream()
         stream.close()
         p.terminate()
