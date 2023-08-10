@@ -1,10 +1,14 @@
-# https://github.com/alphacep/vosk-api/tree/master/python
-
 import streamlit as st
 import pyaudio
 import json
-
 from vosk import Model, KaldiRecognizer
+
+# Set page title and logo
+st.set_page_config(
+    page_title="RTSR",
+    page_icon="💬",
+)
+
 
 def main():
     st.title("Real-Time Speech Recognition App")
