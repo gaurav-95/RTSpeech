@@ -1,3 +1,11 @@
+# https://github.com/whitphx/streamlit-stt-app/blob/main/app_deepspeech.py
+# https://stackoverflow.com/questions/75973228/speech-recognition-with-streamlit
+# https://www.youtube.com/watch?v=2kSPbH4jWME
+# https://realpython.com/python-speech-recognition/
+# https://github.com/Uberi/speech_recognition#readme
+# https://www.geeksforgeeks.org/python-convert-speech-to-text-and-text-to-speech/#:~:text=Translation%20of%20Speech%20to%20Text%3A,function%20may%20take%202%20arguments.&text=After%20initialization%2C%20we%20will%20make,may%20also%20take%202%20arguments.
+
+
 import streamlit as st
 import speech_recognition as sr
 
