@@ -1,3 +1,5 @@
+# https://github.com/alphacep/vosk-api/tree/master/python
+
 import streamlit as st
 import pyaudio
 import json
