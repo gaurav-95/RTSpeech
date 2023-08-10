@@ -3,6 +3,10 @@
 Streamlit app that uses vosk library to perform real time speech recognition.
 Recognition can be a bit off is audio spoken is not clear enough but works great most of the time with clear audio.
 
+<p align="center">
+    <img src="https://github.com/gaurav-95/RTSpeech/blob/be34fedf3cdfb254bda78cd65f975bb1faa69439/demo/RTS-Demo.gif"/>
+</p>
+
 ## Installation
 
 1. Clone the repository:
