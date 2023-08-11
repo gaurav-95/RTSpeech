@@ -1,0 +1,2 @@
+https://github.com/guillaumekln/faster-whisper
+https://github.com/collabora/WhisperLive
