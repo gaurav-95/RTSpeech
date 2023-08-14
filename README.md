@@ -22,16 +22,19 @@ git clone https://github.com/gaurav-95/RTSpeech.git
 pip install -r requirements.txt
 ```
 
-3. Run using Streamlit!
+3. Run app using Gradio or Streamlit!
 
+To use the better Gradio version that uses whisper recognizer run with: 
+```bash
+python gr_app.py
+```
+(You need to press stop recording in order to view the results in the gradio version of the app.)
+
+For Streamlit version that uses vosk recognizer:
 ```bash
 python -m streamlit run app.py
 ```
 
-To use better gradio version that uses whisper run with: 
-```bash
-python gr_app.py
-```
 
 ## References:
 - https://github.com/alphacep/vosk-api/tree/master/python
