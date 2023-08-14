@@ -28,5 +28,10 @@ pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
+To use better gradio version that uses whisper run with: 
+```bash
+python gr_app.py
+```
+
 ## References:
 - https://github.com/alphacep/vosk-api/tree/master/python
