@@ -35,3 +35,4 @@ python gr_app.py
 
 ## References:
 - https://github.com/alphacep/vosk-api/tree/master/python
+- https://github.com/openai/whisper
